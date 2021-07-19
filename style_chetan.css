@@ -2,11 +2,11 @@ body{
     margin: 0;
     padding: 0;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; 
+   justify-content: center; 
+    align-items: center; */
     background: white;
-    /* background-image: url(/images/background.png); */
+    background-image: url(/images/background.png);
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -17,10 +17,13 @@ body{
   }
   
   .slider{
-    width: 800px;
-    height: 500px;
+    width: 1000px;
+    height: 700px;
     border-radius: 10px;
     overflow: hidden;
+    position: relative;
+    left: 300px;
+    
   }
 
   button{
@@ -29,7 +32,7 @@ body{
   
   .slides{
     width: 600%;
-    height: 500px;
+    height: 600px;
     display: flex;
   }
   .new{
@@ -50,42 +53,47 @@ body{
 
   #FIRST{
     background-image: url(/images/fort.jpg);
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
 
   #SECOND{
     background-image: url(/images/glamping.jpg);
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
 
   #THIRD{
     background-image: url(/images/temple.jpg);
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
 
   #FOURTH{
     background-image: url(/images/waterfall.jpg);
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
 
   #FIFTH{
     background-image: url(/images/yoga.jpg);
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center center;
   }
 
   #SIXTH{
     background-image: url(/images/newyear.jpg);
-    background-attachment: fixed;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   } 
@@ -95,19 +103,20 @@ body{
   cursor: pointer;
 }
 
-.hide{
+/* .hide{
   display: none;
   opacity: 1;
-}
+} */
 
-.hide p{
+.para{
   font-size: xx-large;
   font-weight: bolder;
-  color: black;
-  position: relative;
+  color: white;
+  /* position: relative;
   top: 50px;
-  opacity: 1;
+  opacity: 1; */
 }
+
   
   /*css for manual slide navigation*/
   
@@ -125,6 +134,7 @@ body{
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
+    margin: 0px -190px 0px 0px
   }
   
   .manual-btn:not(:last-child){
@@ -166,6 +176,7 @@ body{
     width: 800px;
     justify-content: center;
     margin-top: 460px;
+    display: none;
   }
   
   .navigation-auto div{
@@ -173,33 +184,48 @@ body{
     padding: 5px;
     border-radius: 10px;
     transition: 1s;
+    display: none;
   }
   
   .navigation-auto div:not(:last-child){
     margin-right: 40px;
+    display: none;
   }
   
   #radio1:checked ~ .navigation-auto .auto-btn1{
     background: black;
+    display: none;
   }
   
   #radio2:checked ~ .navigation-auto .auto-btn2{
     background: black;
+    display: none;
   }
   
   #radio3:checked ~ .navigation-auto .auto-btn3{
     background: black;
+    display: none;
   }
   
   #radio4:checked ~ .navigation-auto .auto-btn4{
     background: black;
+    display: none;
   }
 
   #radio5:checked ~ .navigation-auto .auto-btn5{
     background: black;
+    display: none;
   }
 
   #radio6:checked ~ .navigation-auto .auto-btn6{
     background: black;
+    display: none;
+  }
+  .text{
+    color: white;
+    position: relative;
+    left: 300px;
+    display: inline-block;
+    width: 1000px;
   }
 

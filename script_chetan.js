@@ -1,4 +1,4 @@
-
+let data = ["India's Unique Forts","Glamping In The Western Ghats: When Serenity Beckons","Around India In 12 Jyotirlingas","Indian Monsoon Getaways","India - The Land Of Yoga","Joy To The World: Christmas And New Year Celebrations In India"]
 let counter = 1;
 setInterval(function(){
     document.getElementById('radio' + counter).checked = true;
@@ -14,14 +14,30 @@ for(let i =0;i<6;i++){
         location.href = `/blogtype/indx${i+1}.html`
     })
 }
-let hide = document.querySelectorAll('.hide')
-for(let x =0;x<6;x++){
-    slide[x].addEventListener('mouseover', () => {
-        hide[x].style.display = "block";
+let text = document.querySelector('.text')
+for(let i =0;i<6;i++){
+    slide[i].addEventListener('mouseover', () => {
+        text.innerHTML = `${data[i]}`
+        text.classList.add('para')
     })
 }
-for(let x =0;x<6;x++){
-    slide[x].addEventListener('mouseout', () => {
-        hide[x].style.display = "none";
+for(let i =0;i<6;i++){
+    slide[i].addEventListener('mouseout', () => {
+        text.innerHTML = '';
+        text.classList.remove('para')
+
     })
 }
+
+
+// let hide = document.querySelectorAll('.hide')
+// for(let x =0;x<6;x++){
+//     slide[x].addEventListener('mouseover', () => {
+//         hide[x].style.display = "block";
+//     })
+// }
+// for(let x =0;x<6;x++){
+//     slide[x].addEventListener('mouseout', () => {
+//         hide[x].style.display = "none";
+//     })
+// }
